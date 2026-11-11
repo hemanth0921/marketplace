@@ -1,0 +1,45 @@
+body{
+    font-family:Segoe UI,sans-serif;
+    background:#f5f5f5;
+}
+
+.review-container{
+    width:80%;
+    margin:auto;
+    padding:30px;
+}
+
+.review-container h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+#reviewForm{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+#reviewForm input,
+#reviewForm textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+}
+
+#reviewForm button{
+    width:100%;
+    padding:12px;
+    background:#f59e0b;
+    color:white;
+    border:none;
+    border-radius:10px;
+}
+
+.review-card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}

@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#060816;
+    color:white;
+    min-height:100vh;
+}
+
+.vendor-dashboard{
+    display:flex;
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    width:280px;
+    min-height:100vh;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border-right:
+    1px solid rgba(255,255,255,.1);
+
+    padding:30px;
+}
+
+.sidebar h2{
+
+    margin-bottom:40px;
+
+    font-size:32px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #60a5fa,
+    #22c55e);
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.sidebar a:hover{
+
+    background:
+    rgba(255,255,255,.08);
+
+    transform:
+    translateX(10px);
+}
+
+/* Main */
+
+.main-content{
+    flex:1;
+    padding:40px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header button{
+
+    border:none;
+
+    padding:15px 25px;
+
+    border-radius:15px;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #22c55e);
+}
+
+.stats-grid{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+}
+
+.stat-card{
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    transition:.4s;
+}
+
+.stat-card:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.03);
+
+    box-shadow:
+    0 20px 40px
+    rgba(37,99,235,.3);
+}
+
+.stat-card h3{
+    color:#cbd5e1;
+    margin-bottom:10px;
+}
+
+.stat-card h2{
+    font-size:32px;
+    color:#22c55e;
+}
+
+/* Products */
+
+.products-section{
+    margin-top:50px;
+}
+
+.products-section h2{
+    margin-bottom:20px;
+}
+
+.product-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    transition:.4s;
+}
+
+.product-card:hover{
+
+    transform:
+    translateX(10px);
+}
+
+@media(max-width:900px){
+
+    .vendor-dashboard{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        min-height:auto;
+    }
+}

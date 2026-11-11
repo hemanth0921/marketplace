@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product Reviews</title>
+
+    <link rel="stylesheet" href="/static/css/reviews.css">
+</head>
+
+<body>
+
+    <div class="review-container">
+
+        <h1>⭐ Product Reviews</h1>
+
+        <form id="reviewForm">
+
+            <input
+                type="number"
+                id="rating"
+                min="1"
+                max="5"
+                placeholder="Rating (1-5)"
+                required
+            >
+
+            <textarea
+                id="comment"
+                placeholder="Write Review"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Submit Review
+            </button>
+
+        </form>
+
+        <div id="reviews-list"></div>
+
+    </div>
+
+    <script src="/static/js/reviews.js"></script>
+
+</body>
+
+</html>

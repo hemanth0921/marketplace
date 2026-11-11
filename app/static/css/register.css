@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#0f172a;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.background{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.shape{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+}
+
+.shape1{
+    width:350px;
+    height:350px;
+    background:#2563eb;
+    top:-100px;
+    left:-100px;
+}
+
+.shape2{
+    width:350px;
+    height:350px;
+    background:#7c3aed;
+    right:-100px;
+    bottom:-100px;
+}
+
+.shape3{
+    width:250px;
+    height:250px;
+    background:#06b6d4;
+    top:40%;
+    left:50%;
+}
+
+.container{
+    width:1150px;
+    max-width:95%;
+    display:flex;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.4);
+}
+
+.left-panel{
+    flex:1;
+    color:white;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.left-panel h1{
+    font-size:56px;
+    margin-bottom:20px;
+}
+
+.left-panel p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.feature-card{
+    margin-top:18px;
+    padding:18px;
+    border-radius:15px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+}
+
+.register-box{
+    flex:1;
+    padding:50px;
+    color:white;
+}
+
+.register-box h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.register-box p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.register-box form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.register-box input{
+    width:100%;
+    padding:16px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+}
+
+.register-box input::placeholder{
+    color:#cbd5e1;
+}
+
+.register-box button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+}
+
+.register-box button:hover{
+    transform:translateY(-3px);
+}
+
+.bottom-link{
+    text-align:center;
+    margin-top:25px;
+}
+
+.bottom-link a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+@media(max-width:900px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .left-panel{
+        display:none;
+    }
+}

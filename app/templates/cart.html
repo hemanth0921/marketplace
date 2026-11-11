@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+
+    <link rel="stylesheet" href="/static/css/cart.css">
+</head>
+<body>
+
+<div class="cart-container">
+
+    <div class="header">
+        <h1>🛒 My Cart</h1>
+        <p>Review your selected products</p>
+    </div>
+
+    <div class="cart-grid">
+
+        <div class="cart-card">
+
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Phone">
+
+            <h3>iPhone 16 Pro Max</h3>
+            <p>Latest Apple Flagship</p>
+
+            <h2>₹1,29,999</h2>
+
+            <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+
+            <button class="remove-btn">
+                Remove
+            </button>
+
+        </div>
+
+        <div class="cart-card">
+
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853" alt="Laptop">
+
+            <h3>Gaming Laptop</h3>
+            <p>High Performance Laptop</p>
+
+            <h2>₹79,999</h2>
+
+            <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+
+            <button class="remove-btn">
+                Remove
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="summary">
+
+        <h2>Order Summary</h2>
+
+        <div class="row">
+            <span>Subtotal</span>
+            <span>₹2,09,998</span>
+        </div>
+
+        <div class="row">
+            <span>Shipping</span>
+            <span>Free</span>
+        </div>
+
+        <div class="row total">
+            <span>Total</span>
+            <span>₹2,09,998</span>
+        </div>
+
+        <button class="checkout-btn">
+            Proceed To Checkout
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
