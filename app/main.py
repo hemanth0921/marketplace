@@ -14,8 +14,31 @@ from app.routers import wishlist
 from app.routers import review
 from app.routers import invoice
 from app.routers import analytics
+from fastapi.exceptions import RequestValidationError
+from starlette.exceptions import HTTPException
+
+from app.exceptions.handlers import (
+    http_exception_handler,
+    validation_exception_handler,
+    general_exception_handler
+)
 
 app = FastAPI()
+
+app.add_exception_handler(
+    HTTPException,
+    http_exception_handler
+)
+
+app.add_exception_handler(
+    RequestValidationError,
+    validation_exception_handler
+)
+
+app.add_exception_handler(
+    Exception,
+    general_exception_handler
+)
 
 app.mount(
     "/static",

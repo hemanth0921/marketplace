@@ -53,16 +53,15 @@ def get_all_cart_items(
     return db.query(Cart).all()
 
 
-@router.get("/user/{user_id}")
-def get_user_cart(
-    user_id: int,
+@router.get("/")
+def get_all_cart_items(
     db: Session = Depends(get_db)
 ):
-    cart_items = db.query(Cart).filter(
-        Cart.user_id == user_id
-    ).all()
-
-    return cart_items
+    try:
+        carts = db.query(Cart).all()
+        return carts
+    except Exception as e:
+        return {"error": str(e)}
 
 
 @router.put("/{cart_id}")

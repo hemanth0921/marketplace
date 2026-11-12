@@ -11,6 +11,7 @@ from app.core.security import (
     create_access_token
 )
 
+from app.core.dependencies import get_current_user
 router = APIRouter()
 
 
@@ -92,4 +93,13 @@ def login_user(
         "user_id": db_user.id,
         "email": db_user.email,
         "role": db_user.role
+    }
+
+@router.get("/profile")
+def profile(
+    current_user=Depends(get_current_user)
+):
+    return {
+        "message": "Profile Retrieved Successfully",
+        "user": current_user
     }
