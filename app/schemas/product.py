@@ -7,7 +7,8 @@ class ProductCreate(BaseModel):
     description: str
     price: float
     stock: int
-    image: Optional[str] = None
+    category: Optional[str] = None
+    image_url: Optional[str] = None
 
 
 class ProductResponse(BaseModel):
@@ -16,7 +17,8 @@ class ProductResponse(BaseModel):
     description: str
     price: float
     stock: int
-    image: Optional[str] = None
+    category: Optional[str] = None
+    image_url: Optional[str] = None
 
     class Config:
         from_attributes = True

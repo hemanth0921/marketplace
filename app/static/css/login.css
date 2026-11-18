@@ -214,3 +214,113 @@ form button:hover{
     }
 
 }
+
+/* Show Password Section */
+
+.show-password{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:10px;
+    color:#dbeafe;
+    font-size:14px;
+}
+
+.show-password input{
+    width:16px;
+    height:16px;
+    cursor:pointer;
+}
+
+.show-password label{
+    cursor:pointer;
+}
+
+/* Login Message */
+
+#loginMessage{
+    min-height:25px;
+    text-align:center;
+    margin:10px 0;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* Success */
+
+.success{
+    color:#22c55e;
+}
+
+/* Error */
+
+.error{
+    color:#ef4444;
+}
+
+/* Button Loading */
+
+button:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+}
+
+/* Login Button Hover */
+
+form button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 10px 25px rgba(37,99,235,.4);
+}
+
+/* Social Buttons */
+
+.google,
+.github{
+    transition:.3s;
+    font-weight:600;
+}
+
+.google:hover{
+    background:#4285F4;
+    color:white;
+    transform:translateY(-3px);
+}
+
+.github:hover{
+    background:#24292e;
+    color:white;
+    transform:translateY(-3px);
+}
+
+/* Input Focus */
+
+.input-group input:focus{
+
+    border:1px solid #60a5fa;
+
+    box-shadow:
+    0 0 15px rgba(96,165,250,.4);
+}
+
+/* Smooth Fade */
+
+.login-box{
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

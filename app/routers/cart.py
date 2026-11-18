@@ -45,14 +45,6 @@ def add_to_cart(
         "cart_id": new_cart.id
     }
 
-
-@router.get("/")
-def get_all_cart_items(
-    db: Session = Depends(get_db)
-):
-    return db.query(Cart).all()
-
-
 @router.get("/")
 def get_all_cart_items(
     db: Session = Depends(get_db)

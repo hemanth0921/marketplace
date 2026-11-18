@@ -20,7 +20,9 @@ def create_product(
         name=product.name,
         description=product.description,
         price=product.price,
-        stock=product.stock
+        stock=product.stock,
+        category=product.category,
+        image_url=product.image_url
     )
 
     db.add(new_product)
@@ -98,6 +100,8 @@ def update_product(
     product.description = product_data.description
     product.price = product_data.price
     product.stock = product_data.stock
+    product.category = product_data.category
+    product.image_url = product_data.image_url
 
     db.commit()
     db.refresh(product)

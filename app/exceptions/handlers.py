@@ -39,6 +39,6 @@ async def general_exception_handler(
         status_code=500,
         content={
             "success": False,
-            "error": "Internal Server Error"
+            "error": str(exc)
         }
     )

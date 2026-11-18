@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Orders</title>
 
     <link rel="stylesheet" href="/static/css/orders.css">
 </head>
 
 <body>
+
 <div class="orders-container">
 
     <div class="orders-header">
@@ -15,15 +18,22 @@
         <p>Track all your purchases in one place</p>
     </div>
 
+    <!-- Order 1 -->
+
     <div class="order-card">
 
         <div class="order-image">
-            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+            <img
+                src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+                alt="iPhone"
+            >
         </div>
 
         <div class="order-info">
             <h2>iPhone 16 Pro Max</h2>
+
             <p>Order ID : #MP10245</p>
+
             <p>Ordered : 08 Nov 2026</p>
 
             <div class="status delivered">
@@ -37,20 +47,29 @@
 
     </div>
 
+    <!-- Order 2 -->
+
     <div class="order-card">
 
         <div class="order-image">
-            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853">
+            <img
+                src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+                alt="Laptop"
+            >
         </div>
 
         <div class="order-info">
+
             <h2>Gaming Laptop</h2>
+
             <p>Order ID : #MP20981</p>
+
             <p>Expected : Tomorrow</p>
 
             <div class="status shipping">
                 Shipping
             </div>
+
         </div>
 
         <div class="order-price">
@@ -59,10 +78,40 @@
 
     </div>
 
+    <!-- Order 3 -->
+
+    <div class="order-card">
+
+        <div class="order-image">
+            <img
+                src="https://via.placeholder.com/130"
+                alt="Headphones"
+            >
+        </div>
+
+        <div class="order-info">
+
+            <h2>AirPods Pro</h2>
+
+            <p>Order ID : #MP30991</p>
+
+            <p>Expected : 20 Nov 2026</p>
+
+            <div class="status processing">
+                Processing
+            </div>
+
+        </div>
+
+        <div class="order-price">
+            ₹24,999
+        </div>
+
+    </div>
+
 </div>
-    
-    <script src="/static/js/orders.js"></script>
+
+<script src="/static/js/orders.js"></script>
 
 </body>
-
 </html>

@@ -14,6 +14,7 @@ from app.routers import wishlist
 from app.routers import review
 from app.routers import invoice
 from app.routers import analytics
+
 from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException
 
@@ -25,20 +26,21 @@ from app.exceptions.handlers import (
 
 app = FastAPI()
 
-app.add_exception_handler(
-    HTTPException,
-    http_exception_handler
-)
 
-app.add_exception_handler(
-    RequestValidationError,
-    validation_exception_handler
-)
+# app.add_exception_handler(
+#     HTTPException,
+#     http_exception_handler
+# )
 
-app.add_exception_handler(
-    Exception,
-    general_exception_handler
-)
+# app.add_exception_handler(
+#     RequestValidationError,
+#     validation_exception_handler
+# )
+
+# app.add_exception_handler(
+#     Exception,
+#     general_exception_handler
+# )
 
 app.mount(
     "/static",
@@ -58,13 +60,11 @@ app.include_router(review.router)
 app.include_router(invoice.router)
 app.include_router(analytics.router)
 
-
 @app.get("/", response_class=HTMLResponse)
 def home():
     return Path("app/templates/home.html").read_text(
         encoding="utf-8"
     )
-
 
 @app.get("/register", response_class=HTMLResponse)
 def register_page():
@@ -72,78 +72,47 @@ def register_page():
         encoding="utf-8"
     )
 
-
 @app.get("/login", response_class=HTMLResponse)
 def login_page():
     return Path("app/templates/login.html").read_text(
         encoding="utf-8"
     )
 
-
-@app.get("/cart-page", response_class=HTMLResponse)
-def cart_page():
-    return Path("app/templates/cart.html").read_text(
-        encoding="utf-8"
-    )
-
-
-@app.get("/orders-page", response_class=HTMLResponse)
-def orders_page():
-    return Path("app/templates/orders.html").read_text(
-        encoding="utf-8"
-    )
-
+from fastapi.responses import HTMLResponse
 
 @app.get("/vendor-dashboard", response_class=HTMLResponse)
 def vendor_dashboard():
-    return Path("app/templates/vendor_dashboard.html").read_text(
+    return Path(
+        "app/templates/vendor-dashboard.html"
+    ).read_text(
         encoding="utf-8"
     )
-
 
 @app.get("/profile", response_class=HTMLResponse)
 def profile_page():
-    return Path("app/templates/profile.html").read_text(
-        encoding="utf-8"
-    )
-
-
-@app.get("/admin-dashboard", response_class=HTMLResponse)
-def admin_dashboard():
-    return Path("app/templates/admin_dashboard.html").read_text(
-        encoding="utf-8"
-    )
+    return Path(
+        "app/templates/profile.html"
+    ).read_text(encoding="utf-8")
 
 
 @app.get("/wishlist-page", response_class=HTMLResponse)
 def wishlist_page():
-    return Path("app/templates/wishlist.html").read_text(
-        encoding="utf-8"
-    )
+    return Path(
+        "app/templates/wishlist.html"
+    ).read_text(encoding="utf-8")
 
 
-@app.get("/invoice-page", response_class=HTMLResponse)
-def invoice_page():
-    return Path("app/templates/invoice.html").read_text(
-        encoding="utf-8"
-    )
+@app.get("/cart-page", response_class=HTMLResponse)
+def cart_page():
+    return Path(
+        "app/templates/cart.html"
+    ).read_text(encoding="utf-8")
 
-
-@app.get("/checkout", response_class=HTMLResponse)
-def checkout_page():
-    return Path("app/templates/checkout.html").read_text(
-        encoding="utf-8"
-    )
-
-@app.get("/payment-page", response_class=HTMLResponse)
-def payment_page():
-    return Path("app/templates/payment.html").read_text(
-        encoding="utf-8"
-    )
-
-@app.get("/reviews-page", response_class=HTMLResponse)
-def reviews_page():
-    return Path("app/templates/reviews.html").read_text(
+@app.get("/profile-page", response_class=HTMLResponse)
+def profile_page():
+    return Path(
+        "app/templates/profile.html"
+    ).read_text(
         encoding="utf-8"
     )
 
@@ -151,6 +120,22 @@ def reviews_page():
 def vendor_products():
     return Path(
         "app/templates/vendor_products.html"
+    ).read_text(
+        encoding="utf-8"
+    )
+
+@app.get("/add-product", response_class=HTMLResponse)
+def add_product_page():
+    return Path(
+        "app/templates/add-product.html"
+    ).read_text(
+        encoding="utf-8"
+    )
+
+@app.get("/orders-page", response_class=HTMLResponse)
+def orders_page():
+    return Path(
+        "app/templates/orders.html"
     ).read_text(
         encoding="utf-8"
     )
