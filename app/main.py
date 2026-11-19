@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 
@@ -136,6 +137,22 @@ def add_product_page():
 def orders_page():
     return Path(
         "app/templates/orders.html"
+    ).read_text(
+        encoding="utf-8"
+    )
+
+@app.get("/checkout", response_class=HTMLResponse)
+def checkout_page():
+    return Path(
+        "app/templates/checkout.html"
+    ).read_text(
+        encoding="utf-8"
+    )
+
+@app.get("/payment-page", response_class=HTMLResponse)
+def payment_page():
+    return Path(
+        "app/templates/payment.html"
     ).read_text(
         encoding="utf-8"
     )
